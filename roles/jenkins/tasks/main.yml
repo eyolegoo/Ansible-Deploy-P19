@@ -8,7 +8,7 @@
 
 - name: add the repository key to repos list
   ansible.builtin.get_url:
-    url:  http://pkg.jenkins.io/redhat-stable/jenkins.repo
+    url:   https://pkg.jenkins.io/redhat-stable/jenkins.repo
     dest: /etc/yum.repos.d/jenkins.repo
     mode: 0755
 
