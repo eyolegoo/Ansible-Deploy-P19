@@ -5,9 +5,9 @@
     
 - name: create database
   community.mysql.mysql_db:
-    login_host: "terraform-2023071908424018970000001.cg5yskihsrzx.us-east-1.rds.amazonaws.com" 
-    login_user: "teague"
-    login_password: "devopspblproject"
+    login_host: "terraform-20231021104635499400000010.chhu3obm1iwk.us-east-1.rds.amazonaws.com" 
+    login_user: "lego"
+    login_password: "1godwynE"
     name: wordpressdb
     collation: utf8_general_ci
     encoding: utf8
@@ -20,7 +20,7 @@
     regexp: "{{ item.regexp }}"
     replace: "{{ item.replace }}"
   loop:
-    - { regexp: '^localhost', replace: "terraform-2023071908424018970000001.cg5yskihsrzx.us-east-1.rds.amazonaws.com" }
-    - { regexp: '^teague', replace: "teague" }
-    - { regexp: '^wordpressdb', replace: "wordpressdb" }
-    - { regexp: '^devopspblproject', replace: "devopspblproject" }
+    - { regexp: '^localhost', replace: "terraform-20231021104635499400000010.chhu3obm1iwk.us-east-1.rds.amazonaws.com" }
+    - { regexp: '^username_here', line: "lego" }
+    - { regexp: '^database_name_here', line: "wordpressdb" }
+    - { regexp: '^password_here', line: "1godwynE" }
