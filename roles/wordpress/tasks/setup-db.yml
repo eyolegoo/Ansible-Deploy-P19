@@ -5,7 +5,7 @@
     
 - name: create database
   community.mysql.mysql_db:
-    login_host: "terraform-20231021104635499400000010.chhu3obm1iwk.us-east-1.rds.amazonaws.com" 
+    login_host: "terraform-20231024110323418400000010.chhu3obm1iwk.us-east-1.rds.amazonaws.com" 
     login_user: "lego"
     login_password: "1godwynE"
     name: wordpressdb
@@ -18,9 +18,9 @@
   ansible.builtin.replace:
     path: /var/www/html/wp-config.php 
     regexp: "{{ item.regexp }}"
-    replace: "{{ item.replace }}"
+    replace: "{{ item.line }}"
   loop:
-    - { regexp: '^localhost', replace: "terraform-20231021104635499400000010.chhu3obm1iwk.us-east-1.rds.amazonaws.com" }
+    - { regexp: '^localhost', replace: "terraform-20231024110323418400000010.chhu3obm1iwk.us-east-1.rds.amazonaws.com" }
     - { regexp: '^username_here', line: "lego" }
     - { regexp: '^database_name_here', line: "wordpressdb" }
     - { regexp: '^password_here', line: "1godwynE" }
