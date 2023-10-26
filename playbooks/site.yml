@@ -12,10 +12,12 @@
   import_playbook: ../static-assignments/wordpress.yml
 
 - hosts: tag_Name_Jenkins
+  user: ubuntu
 - name: jenkins assignment
   import_playbook: ../static-assignments/jenkins.yml  
 
 - hosts: tag_Name_Artifactory
+  user: ubuntu
 - name: artifactory assignment
   import_playbook: ../static-assignments/jfrog.yml
 
